@@ -1,0 +1,845 @@
+/* ========================================
+ HIROSAKI CRAFT WINES
+ Main Style
+======================================== */
+
+
+/* ---------- BASIC ---------- */
+
+* {
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+background: #f7f6f1;
+color: #20231f;
+font-family:
+  -apple-system,
+  BlinkMacSystemFont,
+  "Helvetica Neue",
+  Arial,
+  sans-serif;
+line-height: 1.7;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+img {
+display: block;
+width: 100%;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.header {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+padding: 28px 5vw;
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+z-index: 10;
+color: white;
+}
+
+.logo {
+font-size: 18px;
+font-weight: 600;
+letter-spacing: 0.08em;
+line-height: 1.2;
+}
+
+.logo small {
+display: block;
+margin-top: 7px;
+font-size: 9px;
+letter-spacing: 0.15em;
+font-weight: 400;
+}
+
+.menu {
+display: flex;
+gap: 28px;
+font-size: 12px;
+letter-spacing: 0.08em;
+}
+
+.menu a {
+transition: opacity 0.3s ease;
+}
+
+.menu a:hover {
+opacity: 0.5;
+}
+
+
+/* ---------- HERO ---------- */
+/* ---------- HERO PHOTO SLIDER ---------- */
+
+.hero-slider {
+ width: 50%;
+ max-width: 800px;
+
+ margin: 0 auto 60px;
+
+ position: relative;
+}
+
+
+.hero-slides {
+ position: relative;
+
+ width: 100%;
+ height: 300px;
+
+ overflow: hidden;
+}
+
+
+.hero-slide {
+ position: absolute;
+
+ inset: 0;
+
+ opacity: 0;
+
+ transition: opacity 0.8s ease;
+
+ touch-action: pan-y;
+}
+
+
+.hero-slide.active {
+ opacity: 1;
+}
+
+
+.hero-slide img {
+ width: 100%;
+ height: 100%;
+ object-fit: contain; /* 枠の中に全体を綺麗に収める */
+}
+
+ object-fit: cover;
+ object-position: center;
+
+ display: block;
+}
+
+
+/* ---------- SLIDER DOTS ---------- */
+
+.slider-dots {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+ gap: 10px;
+
+ margin-top: 18px;
+}
+
+
+.dot {
+ width: 8px;
+ height: 8px;
+
+ padding: 0;
+
+ border: 0;
+ border-radius: 50%;
+
+ background: rgba(255,255,255,0.4);
+
+ cursor: pointer;
+}
+
+
+.dot.active {
+ background: white;
+}
+
+
+.hero {
+position: relative;
+min-height: 100vh;
+display: flex;
+align-items: center;
+overflow: hidden;
+background:
+  linear-gradient(
+    rgba(20, 48, 38, 0.25),
+    rgba(20, 48, 38, 0.55)
+  );
+color: white;
+}
+
+
+/*
+写真を入れる場所
+
+後でここを
+
+background-image: url("images/iwa.jpg");
+
+のように変更する
+*/
+
+.hero-photo {
+position: absolute;
+inset: 0;
+
+background:
+  linear-gradient(
+    rgba(15, 55, 42, 0.15),
+    rgba(15, 55, 42, 0.55)
+  ),
+  linear-gradient(
+    135deg,
+    #9eb99b,
+    #567967
+  );
+
+background-size: cover;
+background-position: center;
+}
+
+
+.hero-inner {
+position: relative;
+z-index: 2;
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+padding-top: 80px;
+}
+
+.eyebrow {
+margin-bottom: 20px;
+font-size: 11px;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+}
+
+.hero h1 {
+margin: 0;
+font-family: Georgia, "Times New Roman", serif;
+font-size: clamp(60px, 10vw, 150px);
+font-weight: 400;
+line-height: 0.9;
+letter-spacing: -0.04em;
+
+animation: fadeUp 1.2s ease-out forwards;
+}
+
+@keyframes fadeUp {
+from {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+}
+
+.hero p {
+margin-top: 35px;
+font-size: 16px;
+letter-spacing: 0.08em;
+}
+
+.scroll {
+position: absolute;
+right: 5vw;
+bottom: 35px;
+font-size: 10px;
+letter-spacing: 0.2em;
+z-index: 2;
+}
+
+
+/* ---------- SECTION ---------- */
+
+.section {
+padding: 150px 6vw;
+}
+
+.kicker {
+margin-bottom: 25px;
+font-size: 10px;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+font-weight: 600;
+}
+
+.section h2 {
+margin: 0;
+font-family: Georgia, "Times New Roman", serif;
+font-size: clamp(32px, 5vw, 65px);
+line-height: 1.05;
+font-weight: 400;
+letter-spacing: -0.03em;
+}
+
+.intro {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10vw;
+max-width: 1200px;
+margin: 0 auto 100px;
+}
+
+.lead {
+margin: 0;
+font-size: 20px;
+line-height: 1.9;
+max-width: 500px;
+}
+
+.small-copy {
+margin-top: 35px;
+font-size: 11px;
+line-height: 1.8;
+letter-spacing: 0.08em;
+}
+
+
+/* ---------- IMAGE GRID ---------- */
+
+.image-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.image-box {
+position: relative;
+overflow: hidden;
+min-height: 420px;
+}
+
+.image-box.tall {
+margin-top: 100px;
+min-height: 560px;
+}
+
+.placeholder {
+width: 100%;
+height: 100%;
+min-height: inherit;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+background:
+  linear-gradient(
+    135deg,
+    #d6ded1,
+    #91a890
+  );
+
+color: rgba(255,255,255,0.8);
+
+font-size: 10px;
+letter-spacing: 0.2em;
+}
+
+
+/* ---------- WINE ---------- */
+
+.wine {
+background: #ede9df;
+}
+
+.product {
+max-width: 1200px;
+margin: 130px auto 0;
+
+display: grid;
+grid-template-columns: 0.8fr 1.2fr;
+gap: 8vw;
+
+align-items: center;
+}
+
+.product + .product {
+margin-top: 160px;
+}
+
+.product .meta {
+font-size: 10px;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+}
+
+.product h3 {
+margin: 15px 0;
+font-family: Georgia, "Times New Roman", serif;
+font-size: 48px;
+font-weight: 400;
+}
+
+.product p {
+max-width: 420px;
+font-size: 14px;
+line-height: 1.9;
+}
+/* ---------- WINE PROFILE ---------- */
+
+.wine-profile {
+ display: flex;
+ gap: 35px;
+ align-items: center;
+ margin-top: 35px;
+ padding: 20px 0;
+ border-top: 1px solid #bdbab2;
+ border-bottom: 1px solid #bdbab2;
+}
+
+.profile-item {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+}
+
+.profile-label {
+ font-size: 15px;
+ letter-spacing: 0.08em;
+}
+
+.rating {
+ display: flex;
+ gap: 4px;
+}
+
+/* ---------- DELICATE WINE BOTTLE RATING ---------- */
+
+.rating {
+ display: flex;
+ gap: 6px;
+ align-items: flex-end;
+}
+
+.rating span {
+ position: relative;
+ width: 9px;
+ height: 25px;
+ background: #d9d9d9;
+ border-radius: 1px 1px 2px 2px;
+}
+
+
+/* ボトルの首 */
+
+.rating span::before {
+ content: "";
+ position: absolute;
+
+ width: 4px;
+ height: 6px;
+
+ top: -6px;
+ left: 50%;
+
+ transform: translateX(-50%);
+
+ background: inherit;
+
+ border-radius: 1px 1px 0 0;
+}
+
+
+/* ボトルの肩 */
+
+.rating span::after {
+ content: "";
+ position: absolute;
+
+ width: 7px;
+ height: 4px;
+
+ top: -1px;
+ left: 50%;
+
+ transform: translateX(-50%);
+
+ background: inherit;
+
+ border-radius: 50% 50% 0 0;
+}
+
+
+/* 黒いボトル */
+
+.rating span.active {
+ background: #20231f;
+}
+
+
+
+
+/* ---------- FOOD ---------- */
+
+.alt {
+background: #f7f6f1;
+}
+
+.cards {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+max-width: 1200px;
+margin: 100px auto 0;
+}
+
+.card-image {
+height: 450px;
+overflow: hidden;
+}
+
+.card h3 {
+margin: 25px 0 5px;
+font-family: Georgia, "Times New Roman", serif;
+font-size: 25px;
+font-weight: 400;
+}
+
+.card p {
+margin: 0;
+font-size: 13px;
+}
+
+
+/* ---------- IWAKI ---------- */
+
+.green {
+min-height: 80vh;
+
+display: flex;
+align-items: center;
+
+background:
+  linear-gradient(
+    rgba(30, 69, 51, 0.65),
+    rgba(30, 69, 51, 0.65)
+  ),
+  linear-gradient(
+    135deg,
+    #5e806a,
+    #1e4634
+  );
+
+color: white;
+}
+
+.quote {
+width: 90%;
+max-width: 1200px;
+margin: auto;
+}
+
+.quote p {
+margin: 0 0 50px;
+
+font-family: Georgia, "Times New Roman", serif;
+font-size: clamp(40px, 6vw, 80px);
+line-height: 1.15;
+font-weight: 400;
+}
+
+
+/* ---------- BUTTON ---------- */
+
+.button {
+display: inline-block;
+
+padding: 15px 28px;
+
+border: 1px solid rgba(255,255,255,0.7);
+
+font-size: 11px;
+letter-spacing: 0.12em;
+
+transition:
+  background 0.3s ease,
+  color 0.3s ease;
+}
+
+.button:hover {
+background: white;
+color: #203f31;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+padding: 120px 6vw 35px;
+background: #20231f;
+color: #f7f6f1;
+}
+
+.footer-top {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10vw;
+
+max-width: 1200px;
+margin: auto;
+}
+
+.footer h2 {
+margin: 0;
+
+font-family: Georgia, "Times New Roman", serif;
+font-size: clamp(60px, 9vw, 130px);
+line-height: 0.9;
+font-weight: 400;
+}
+
+.footer p {
+font-size: 12px;
+line-height: 1.8;
+letter-spacing: 0.08em;
+}
+
+.footer-bottom {
+max-width: 1200px;
+margin: 100px auto 0;
+padding-top: 20px;
+
+border-top: 1px solid rgba(255,255,255,0.25);
+
+display: flex;
+justify-content: space-between;
+
+font-size: 9px;
+letter-spacing: 0.1em;
+}
+
+
+/* ========================================
+ MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+
+/* HEADER */
+
+.header {
+  padding: 20px 5vw;
+}
+
+.logo {
+  font-size: 14px;
+}
+
+.logo small {
+  font-size: 7px;
+}
+
+.menu {
+  gap: 12px;
+  font-size: 9px;
+}
+
+
+/* HERO */
+
+.hero {
+  min-height: 90vh;
+}
+
+.hero-inner {
+  padding-top: 100px;
+}
+
+.hero h1 {
+  font-size: 62px;
+}
+
+.hero p {
+  font-size: 13px;
+}
+
+
+/* SECTION */
+
+.section {
+  padding: 100px 6vw;
+}
+
+.section h2 {
+  font-size: 44px;
+}
+
+
+/* INTRO */
+
+.intro {
+  grid-template-columns: 1fr;
+  gap: 50px;
+  margin-bottom: 70px;
+}
+
+.lead {
+  font-size: 16px;
+}
+
+
+/* IMAGES */
+
+.image-grid {
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.image-box {
+  min-height: 360px;
+}
+
+.image-box.tall {
+  margin-top: 0;
+  min-height: 420px;
+}
+
+
+/* WINE */
+
+.product {
+  grid-template-columns: 1fr;
+  gap: 45px;
+  margin-top: 80px;
+}
+
+.product + .product {
+  margin-top: 100px;
+}
+
+.product h3 {
+  font-size: 40px;
+}
+.wine-profile {
+  flex-wrap: wrap;
+  gap: 15px 25px;
+  margin-top: 25px;
+}
+
+.profile-label {
+  font-size: 13px;
+}
+
+.rating span {
+  width: 14px;
+  height: 20px;
+}
+.wine-profile {
+  flex-wrap: wrap;
+  gap: 15px 25px;
+  margin-top: 25px;
+}
+
+.profile-label {
+  font-size: 13px;
+}
+
+.rating span {
+  width: 14px;
+  height: 20px;
+}
+
+
+/* FOOD */
+
+.cards {
+  grid-template-columns: 1fr;
+  gap: 70px;
+  margin-top: 70px;
+}
+
+.card-image {
+  height: 420px;
+}
+
+
+/* IWAKI */
+
+.green {
+  min-height: 70vh;
+}
+
+.quote p {
+  font-size: 43px;
+}
+
+
+/* FOOTER */
+
+.footer {
+  padding: 90px 6vw 30px;
+}
+
+.footer-top {
+  grid-template-columns: 1fr;
+  gap: 60px;
+}
+
+.footer h2 {
+  font-size: 75px;
+}
+
+.footer-bottom {
+  margin-top: 70px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+}
+/* 写真の下の丸ボタンを画面中央に固定する設定 */
+.slider-dots {
+ position: absolute !important;
+ bottom: -40px !important;
+ left: 0 !important;
+ width: 100% !important;
+ z-index: 10 !important;
+ display: flex !important;
+ justify-content: center !important;
+ align-items: center !important;
+ gap: 10px !important;
+}
+
+/* 四角くなってしまったボタンを「きれいな丸」に戻す設定 */
+.dot {
+ width: 8px !important;
+ height: 8px !important;
+ padding: 0 !important;
+ border: 0 !important;
+ border-radius: 50% !important;
+ background: rgba(255, 255, 255, 0.4) !important;
+ cursor: pointer !important;
+}
+
+/* 今表示されている写真の丸ボタンを白くする設定 */
+.dot.active {
+ background: #ffffff !important;
+}
+
+iPhoneから送信
